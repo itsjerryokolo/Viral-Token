@@ -1,0 +1,16 @@
+{
+  "name": "viral-token",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ itsjerryokolo/viral-token",
+    "create-local": "graph create --node http://localhost:8020/ itsjerryokolo/viral-token",
+    "remove-local": "graph remove --node http://localhost:8020/ itsjerryokolo/viral-token",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 itsjerryokolo/viral-token"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.22.4",
+    "@graphprotocol/graph-ts": "0.22.1"
+  }
+}

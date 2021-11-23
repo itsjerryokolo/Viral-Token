@@ -1,6 +1,19 @@
-type ExampleEntity @entity {
+type Account @entity {
   id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
+  balance: BigInt!
+  usdcValue: [BigInt!]!
+  refferer: String!
+  reffererBalance: BigInt!
+  reffererUsdcBalance: [BigInt!]!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type Token @entity {
+  id: ID!
+  totalSupply: BigInt!
+  sender: Account!
+  receiver: Account!
+  blockNumber: BigInt!
+  timestamp: BigInt!
 }
